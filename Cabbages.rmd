@@ -53,12 +53,19 @@ basicCN + geom_boxplot()
 ```
   
   
+  The boxplot shows that the VitC is more for c52 than for c39. The VitC level for c52 is around 65, and the c39 is around 52.
+  
 ### get fancy  
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
+```{r}
+favstats(VitC~Cult,data=veggy) 
+```
+
+The table shows that c39 is an average of 51.5 and the c52 results are an average of 64.4, both are average values of the Vitamin C content
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -78,6 +85,6 @@ The p-value is 0.00000003405
 
 # Discussion and Conclusion
 
+
+
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
-
-
